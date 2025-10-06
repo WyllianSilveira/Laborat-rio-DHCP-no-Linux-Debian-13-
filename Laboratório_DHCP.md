@@ -54,7 +54,16 @@ Neste diretório, encontramos o arquivo `isc-dhcp-server`, responsável por arma
 de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 
 É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
-<br><br>
-![Configuração padrão](imagem/arquivo_configuração_padrão_placa_dhcp.png)
+
+## 🔹 2. Editando o arquivo padrão do serviço
+
+📸 Imagem:  
+![Configuração padrão do serviço DHCP](imagem/arquivo_configuração_padrão_placa_dhcp.png)
+
+Abrimos o arquivo de configuração padrão do serviço **DHCP**:
+
+```bash
+nano /etc/default/isc-dhcp-server
+```
 
 
