@@ -92,14 +92,14 @@ nano /etc/network/interfaces
 ```
 Adicionamos a configuração manual da interface enp0s8, que será a interface servidora DHCP (rede interna):
 # Interface DHCP
+```bash
 auto enp0s8
-iface enp0s8 inet static  
-
+iface enp0s8 inet static
     address 10.200.0.1
     netmask 255.255.0.0
     network 10.200.0.0
     broadcast 10.200.0.255
-
+```
 🔸 Explicação dos parâmetros:
 
 address: IP fixo do servidor DHCP (gateway da rede interna).
