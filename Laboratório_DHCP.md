@@ -65,5 +65,15 @@ Abrimos o arquivo de configuração padrão do serviço **DHCP**:
 ```bash
 nano /etc/default/isc-dhcp-server
 ```
+Dentro dele, configuramos a interface de rede responsável por responder aos pedidos DHCP:
 
+INTERFACESv4="enp0s8"
+INTERFACESv6=""
+
+INTERFACESv4: define a interface de rede IPv4 (no caso, enp0s8).
+
+INTERFACESv6: vazio, pois não estamos usando DHCPv6.
+
+💡 Essa configuração garante que o serviço ISC-DHCP-Server escute e distribua IPs apenas pela
+interface enp0s8, evitando conflitos com outras interfaces do sistema.
 
