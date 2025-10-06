@@ -67,7 +67,8 @@ nano /etc/default/isc-dhcp-server
 ```
 Dentro dele, configuramos a interface de rede responsável por responder aos pedidos DHCP:
 
-INTERFACESv4="enp0s8"
+INTERFACESv4="enp0s8"  
+
 INTERFACESv6=""
 
 INTERFACESv4: define a interface de rede IPv4 (no caso, enp0s8).
