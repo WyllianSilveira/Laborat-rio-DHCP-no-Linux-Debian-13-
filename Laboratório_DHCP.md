@@ -37,9 +37,11 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 ## 🔹 1. Acesso ao diretório padrão de configuração
 
+
+
 ```bash
 cd /etc/default
 ls
+```
 
 ![Acesso ao diretório padrão](imagem.png)
-
