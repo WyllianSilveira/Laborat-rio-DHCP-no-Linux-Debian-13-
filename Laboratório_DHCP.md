@@ -77,4 +77,36 @@ INTERFACESv6: vazio, pois não estamos usando DHCPv6.
 
 💡 Essa configuração garante que o serviço ISC-DHCP-Server escute e distribua IPs apenas pela
 interface enp0s8, evitando conflitos com outras interfaces do sistema.
+<br><br><br>
 
+## 🔹 3. Configurando a interface de rede no sistema
+
+📸 Imagem:  
+![Configuração da interface de rede](imagem/configurando interface do dhcp.png)
+
+Agora, configuramos o arquivo `/etc/network/interfaces` para definir os parâmetros de rede da interface  
+usada pelo DHCP.
+
+```bash
+nano /etc/network/interfaces
+```
+Adicionamos a configuração manual da interface enp0s8, que será a interface servidora DHCP (rede interna):
+# Interface DHCP
+auto enp0s8
+iface enp0s8 inet static
+    address 10.200.0.1
+    netmask 255.255.0.0
+    network 10.200.0.0
+    broadcast 10.200.0.255
+
+🔸 Explicação dos parâmetros:
+
+address: IP fixo do servidor DHCP (gateway da rede interna).
+
+netmask: máscara de rede.
+
+network: endereço da rede.
+
+broadcast: endereço de broadcast da sub-rede.
+
+💡 Essa interface servirá como gateway e ponto de distribuição de endereços IP para os clientes DHCP.
