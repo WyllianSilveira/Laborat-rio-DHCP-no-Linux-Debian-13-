@@ -41,3 +41,4 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 cd /etc/default
 ls
 
+![ Acesso ao diretório padrão de configuração](Laborat-rio-DHCP-no-Linux-Debian-13-/imagem/Acesso ao diretório padrão de configuração.png)
