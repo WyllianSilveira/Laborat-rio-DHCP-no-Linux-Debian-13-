@@ -82,7 +82,7 @@ interface enp0s8, evitando conflitos com outras interfaces do sistema.
 ## 🔹 3. Configurando a interface de rede no sistema
 
 📸 Imagem:  
-![Configuração da interface de rede](imagem/configurando interface do dhcp.png)
+![Configuração da interface de rede](imagem/configurando_interface_do_dhcp.png)
 
 Agora, configuramos o arquivo `/etc/network/interfaces` para definir os parâmetros de rede da interface  
 usada pelo DHCP.
