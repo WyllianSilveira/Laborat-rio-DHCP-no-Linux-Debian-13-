@@ -3,7 +3,7 @@
 ## 📘 Descrição Geral
 
 Este laboratório tem como objetivo demonstrar a configuração completa de um servidor **DHCP**  
-em um ambiente Linux Debian 10, utilizando máquinas virtuais no VirtualBox para simular uma  
+em um ambiente Linux Debian 13, utilizando máquinas virtuais no VirtualBox para simular uma  
 rede LAN interna.
 
 O cenário foi projetado para representar uma topologia de rede realista, onde o Debian 13  
