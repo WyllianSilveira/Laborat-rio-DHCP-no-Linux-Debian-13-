@@ -41,4 +41,5 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 cd /etc/default
 ls
 
-![ Acesso ao diretório padrão de configuração](imagem/Acesso ao diretório padrão de configuração.png)
+![Acesso ao diretório padrão](imagem/acesso-diretorio-config.png)
+
