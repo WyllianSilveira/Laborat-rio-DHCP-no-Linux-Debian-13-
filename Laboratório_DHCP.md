@@ -44,4 +44,4 @@ cd /etc/default
 ls
 ```
 
-![Acesso ao diretório padrão](imagem.png)
+![Acesso ao diretório padrão](imagem/Acesso ao diretório padrão de configuração.png)
