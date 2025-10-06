@@ -47,11 +47,12 @@ ls
 ![Acesso ao diretório padrão](imagem/imagem.png)
 
 
-O primeiro passo é navegar até o diretório /etc/default, onde estão os arquivos de configuração 
-padrão de diversos serviços do sistema. 
+O primeiro passo é navegar até o diretório `/etc/default`, onde estão localizados os arquivos de  
+configuração padrão de diversos serviços do sistema.
 
-Neste diretório encontramos o arquivo isc-dhcp-server, responsável por armazenar as definições de 
-inicialização e interfaces que o serviço DHCP utilizará. É aqui que especificamos qual placa de 
-rede o serviço vai usar para distribuir endereços IP. 
+Neste diretório, encontramos o arquivo `isc-dhcp-server`, responsável por armazenar as definições  
+de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
+
+É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
 <br><br>
 ![Configuração padrão](imagem/arquivo_configuração_padrão_placa_dhcp.png)
