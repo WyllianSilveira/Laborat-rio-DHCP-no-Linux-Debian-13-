@@ -56,3 +56,5 @@ de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
 <br><br>
 ![Configuração padrão](imagem/arquivo_configuração_padrão_placa_dhcp.png)
+
+
