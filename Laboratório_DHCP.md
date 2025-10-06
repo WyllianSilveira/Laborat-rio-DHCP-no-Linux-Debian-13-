@@ -54,7 +54,7 @@ Neste diretório, encontramos o arquivo `isc-dhcp-server`, responsável por arma
 de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 
 É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
-
+<br><br><br><br>
 ## 🔹 2. Editando o arquivo padrão do serviço
 
 📸 Imagem:  
