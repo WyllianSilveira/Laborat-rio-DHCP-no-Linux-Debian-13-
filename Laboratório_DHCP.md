@@ -53,6 +53,5 @@ padrão de diversos serviços do sistema.
 Neste diretório encontramos o arquivo isc-dhcp-server, responsável por armazenar as definições de 
 inicialização e interfaces que o serviço DHCP utilizará. É aqui que especificamos qual placa de 
 rede o serviço vai usar para distribuir endereços IP. 
-
-
+<br><br>
 ![Configuração padrão](imagem/arquivo_configuração_padrão_placa_dhcp.png)
