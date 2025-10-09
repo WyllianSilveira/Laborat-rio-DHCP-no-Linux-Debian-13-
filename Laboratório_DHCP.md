@@ -150,7 +150,7 @@ O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, ut
 
 
 
-🔹 5. Editando o arquivo de configuração principal (dhcpd.conf)
+##🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
 
 📸 Imagem:
 
@@ -177,25 +177,43 @@ subnet 10.200.0.0 netmask 255.255.255.0 {
 
 ````
 
-🧩 Explicação das diretivas globais
-Diretiva	Descrição
-ddns-update-style none;	Desativa atualizações automáticas de DNS dinâmico pelo servidor DHCP.
-option domain-name ""	Define o nome de domínio a ser informado aos clientes (vazio neste lab).
-option domain-name-servers 8.8.8.8;	Informa o servidor DNS que será usado pelos clientes (DNS público do Google).
-default-lease-time 600;	Tempo padrão de concessão de IP (10 minutos = 600s).
-max-lease-time 7200;	Tempo máximo de concessão (2 horas = 7200s).
-authoritative;	Define que este servidor é o principal e autoritativo para a rede — evita conflitos caso exista outro servidor DHCP.
-🧩 Explicação do bloco subnet
+# 🧩 Explicação das Diretivas Globais
 
-O bloco subnet define as configurações específicas para a rede interna controlada pelo servidor DHCP.
+| Diretiva | Descrição |
+|-----------|------------|
+| `ddns-update-style none;` | Desativa atualizações automáticas de DNS dinâmico pelo servidor DHCP. |
+| `option domain-name "";` | Define o nome de domínio a ser informado aos clientes (vazio neste lab). |
+| `option domain-name-servers 8.8.8.8;` | Informa o servidor DNS que será usado pelos clientes (DNS público do Google). |
+| `default-lease-time 600;` | Tempo padrão de concessão de IP (**10 minutos = 600s**). |
+| `max-lease-time 7200;` | Tempo máximo de concessão (**2 horas = 7200s**). |
+| `authoritative;` | Define que este servidor é o principal e autoritativo para a rede — evita conflitos caso exista outro servidor DHCP. |
 
-Diretiva	Função
-subnet 10.200.0.0 netmask 255.255.255.0 { }	Define a sub-rede atendida pelo servidor DHCP.
-range 10.200.0.100 10.200.0.200;	Faixa de endereços IP que o servidor poderá distribuir aos clientes.
-option routers 10.200.0.1;	Define o gateway padrão (neste caso, o próprio servidor DHCP).
-option broadcast-address 10.200.0.255;	Endereço de broadcast da sub-rede, usado para comunicação em grupo.
-💡 Observação importante
+---
 
-A rede utilizada (10.200.0.0/24) é uma sub-rede privada de classe A, criada exclusivamente para este laboratório.
-O servidor DHCP está configurado com o IP 10.200.0.1, atuando como gateway e ponto de distribuição
-para os clientes conectados à interface interna enp0s8.
+# 🧩 Explicação do Bloco `subnet`
+
+O bloco `subnet` define as configurações específicas para a rede interna controlada pelo servidor DHCP.
+
+| Diretiva | Função |
+|-----------|--------|
+| `subnet 10.200.0.0 netmask 255.255.255.0 { }` | Define a sub-rede atendida pelo servidor DHCP. |
+| `range 10.200.0.100 10.200.0.200;` | Faixa de endereços IP que o servidor poderá distribuir aos clientes. |
+| `option routers 10.200.0.1;` | Define o **gateway padrão** (neste caso, o próprio servidor DHCP). |
+| `option broadcast-address 10.200.0.255;` | Endereço de broadcast da sub-rede, usado para comunicação em grupo. |
+
+---
+
+# 💡 Observação Importante
+
+- A rede utilizada (`10.200.0.0/24`) é uma **sub-rede privada de classe A**, criada exclusivamente para este laboratório.  
+- O servidor DHCP está configurado com o **IP 10.200.0.1**, atuando como **gateway e ponto de distribuição** para os clientes conectados à interface interna `enp0s8`.
+
+---
+
+📘 **Resumo:**
+Este bloco de configuração garante que todos os dispositivos conectados à rede interna recebam automaticamente:
+- Endereço IP dentro do intervalo definido;
+- Gateway de saída;
+- Servidor DNS funcional.
+
+Isso forma a base de um **ambiente de rede automatizado e gerenciável**, essencial em infraestruturas corporativas ou laboratoriais.
