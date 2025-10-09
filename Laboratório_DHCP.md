@@ -279,3 +279,36 @@ A imagem mostra a execução do comando `ip a` no terminal de um cliente conecta
 💡 **Importante:**  
 O cliente recebeu um endereço IP automaticamente do servidor DHCP (`10.200.0.100`), confirmando que o servidor Debian está configurado corretamente para distribuir IPs na rede interna.
 
+
+<br><br>
+## 🔹9 Verificando os Arquivos de Concessão do DHCP
+
+📸 **Imagem:**  
+![Verificando arquivos de concessão do DHCP](imagem/arquivo_maquinas_conectadas_no_server_dhcp.png)
+
+🔍 **Explicação rápida:**  
+Na imagem, é mostrado o comando `ls` sendo executado no diretório `/var/lib/dhcp`. Esse diretório armazena os arquivos de concessão do servidor DHCP, que controlam os endereços IP atribuídos aos clientes.
+
+- **Arquivo `dhcpd.leases`**: O arquivo `dhcpd.leases` é onde o servidor DHCP armazena as informações de concessão de IP, como o endereço atribuído, o tempo de concessão e o cliente que recebeu o IP.
+  - Esse arquivo é fundamental para o funcionamento do serviço DHCP, pois ele mantém um histórico das concessões de IP feitas aos clientes, o que permite a renovação de IPs e o gerenciamento de conflitos de IP.
+  
+- **Arquivo `dhcpd.leases~`**: O arquivo com o sufixo `~` é um arquivo de backup, geralmente gerado automaticamente pelo sistema ou por editores de texto.
+
+💡 **Importante:**  
+Os arquivos de concessão, como `dhcpd.leases`, são essenciais para monitorar e controlar os endereços IP distribuídos. Eles podem ser usados para solucionar problemas relacionados a concessões e renovação de IPs.
+
+
+📂 **Arquivo analisado:** `/var/lib/dhcp/dhcpd.leases`
+📸 **Imagem:**  
+![Verificando arquivos de concessão do DHCP](imagem/dhcpdleaves.png)
+📂 **Arquivo analisado:** `/var/lib/dhcp/dhcpd.leases`
+
+🔍 **Explicação rápida:**  
+O arquivo `dhcpd.leases` armazena as informações de concessões de endereços IP feitas pelo servidor DHCP. Cada concessão registrada neste arquivo contém:
+
+- O endereço IP atribuído ao cliente;
+- O horário de início e término da concessão;
+- O endereço MAC do cliente (identificado por `hardware ethernet`);
+- O identificador único do cliente DHCP (`uid`);
+- O nome do host (se fornecido).
+
