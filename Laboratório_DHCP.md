@@ -121,6 +121,8 @@ broadcast: endereço de broadcast da sub-rede.
 
 💡 Essa interface servirá como gateway e ponto de distribuição de endereços IP para os clientes DHCP.
 
+
+<br><br>
 ## 🔹 5. Configurando o arquivo principal do serviço DHCP
 
 📸 **Imagem:**  
@@ -149,11 +151,11 @@ dhclient-exit-hooks.d → diretório com scripts de saída executados pelo clien
 O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, utilizado pelo serviço para definir o comportamento da distribuição de endereços IP, parâmetros de rede e opções entregues aos clientes.
 
 
-
-##🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
+<br><br>
+## 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
 
 📸 Imagem:
-
+![Arquivo de configuração DHCP](imagem/arquivo_com_configuração_dhcp.png)
 
 🔸 Comando utilizado
 ````bash
