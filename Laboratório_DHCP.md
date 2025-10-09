@@ -220,3 +220,44 @@ Este bloco de configuração garante que todos os dispositivos conectados à red
 - Servidor DNS funcional.
 
 Isso forma a base de um **ambiente de rede automatizado e gerenciável**, essencial em infraestruturas corporativas ou laboratoriais.
+
+<br><br>
+## 🔹 7. Inicializando e Verificando o Serviço DHCP
+
+Após finalizar a configuração do arquivo `dhcpd.conf`, o próximo passo é **inicializar o serviço DHCP** e confirmar se ele foi executado corretamente.
+
+📸 Imagem:<br>
+![Verificando status do serviço DHCP](imagem/status_serviço_dhcp.png)
+
+### 🧠 O que está sendo feito
+
+1. **Inicia o serviço DHCP:**
+   - O comando `service isc-dhcp-server start` ativa o daemon responsável por distribuir endereços IP na rede interna.
+
+2. **Verifica o status do serviço:**
+   - `service isc-dhcp-server status` mostra o estado atual do serviço, o tempo de execução e possíveis erros de inicialização.
+
+3. **Confirma que o serviço está ativo (running):**
+   - A linha `Active: active (running)` indica que o servidor DHCP foi iniciado com sucesso e está escutando na interface configurada (`enp0s8`).
+
+---
+
+### 📜 Script utilizado
+
+```bash
+service isc-dhcp-server start
+service isc-dhcp-server status
+````
+
+💬 Explicação técnica
+
+O serviço isc-dhcp-server foi iniciado com sucesso e está distribuindo endereços IP conforme definido em /etc/dhcp/dhcpd.conf.
+A saída indica:
+
+✅ Loaded: O serviço foi carregado corretamente no sistema.
+
+✅ Active (running): Está em execução e operacional.
+
+✅ Process: Demonstra o PID e o comando de inicialização (dhcpd -4 -q -cf /etc/dhcp/dhcpd.conf enp0s8).
+
+Essa etapa confirma que o servidor DHCP está funcional e pronto para atender as requisições dos clientes conectados à rede interna.
