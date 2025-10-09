@@ -35,7 +35,7 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 # 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
 
-🔹 1. Instalação e acesso ao diretório padrão de configuração
+##🔹 1. Instalação e acesso ao diretório padrão de configuração
 
 Antes de realizar as configurações, é necessário instalar o pacote do servidor DHCP no Debian.
 O serviço utilizado neste laboratório é o ISC-DHCP-SERVER, um dos mais usados em ambientes Linux.
@@ -120,3 +120,82 @@ network: endereço da rede.
 broadcast: endereço de broadcast da sub-rede.
 
 💡 Essa interface servirá como gateway e ponto de distribuição de endereços IP para os clientes DHCP.
+
+## 🔹 5. Configurando o arquivo principal do serviço DHCP
+
+📸 **Imagem:**  
+![Acesso ao diretório /etc/dhcp](imagem/Caminho_do_diretorio_configuração_dhcp.png)
+
+Após definir a interface de rede do servidor, acessamos o diretório **/etc/dhcp**, onde estão armazenados os arquivos principais de configuração do serviço **ISC-DHCP-SERVER**.
+
+### 🔸 Comandos executados
+
+```bash
+cd /etc/dhcp
+ls
+````
+📘 Explicação
+
+cd /etc/dhcp → acessa o diretório onde ficam os arquivos de configuração do servidor DHCP.
+
+Na listagem, observamos:
+
+dhcpd.conf → arquivo principal de configuração do servidor DHCP (versão IPv4)
+
+dhcpd6.conf → configuração para DHCPv6 (endereçamento IPv6)
+
+dhclient-exit-hooks.d → diretório com scripts de saída executados pelo cliente DHCP
+
+O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, utilizado pelo serviço para definir o comportamento da distribuição de endereços IP, parâmetros de rede e opções entregues aos clientes.
+
+
+
+🔹 5. Editando o arquivo de configuração principal (dhcpd.conf)
+
+📸 Imagem:
+
+
+🔸 Comando utilizado
+````bash
+nano /etc/dhcp/dhcpd.conf
+````
+
+Após editar, o conteúdo final do arquivo ficou assim:
+````bash
+ddns-update-style none;
+option domain-name "";
+option domain-name-servers 8.8.8.8;
+default-lease-time 600;
+max-lease-time 7200;
+authoritative;
+
+subnet 10.200.0.0 netmask 255.255.255.0 {
+  range 10.200.0.100 10.200.0.200;
+  option routers 10.200.0.1;
+  option broadcast-address 10.200.0.255;
+}
+
+````
+
+🧩 Explicação das diretivas globais
+Diretiva	Descrição
+ddns-update-style none;	Desativa atualizações automáticas de DNS dinâmico pelo servidor DHCP.
+option domain-name ""	Define o nome de domínio a ser informado aos clientes (vazio neste lab).
+option domain-name-servers 8.8.8.8;	Informa o servidor DNS que será usado pelos clientes (DNS público do Google).
+default-lease-time 600;	Tempo padrão de concessão de IP (10 minutos = 600s).
+max-lease-time 7200;	Tempo máximo de concessão (2 horas = 7200s).
+authoritative;	Define que este servidor é o principal e autoritativo para a rede — evita conflitos caso exista outro servidor DHCP.
+🧩 Explicação do bloco subnet
+
+O bloco subnet define as configurações específicas para a rede interna controlada pelo servidor DHCP.
+
+Diretiva	Função
+subnet 10.200.0.0 netmask 255.255.255.0 { }	Define a sub-rede atendida pelo servidor DHCP.
+range 10.200.0.100 10.200.0.200;	Faixa de endereços IP que o servidor poderá distribuir aos clientes.
+option routers 10.200.0.1;	Define o gateway padrão (neste caso, o próprio servidor DHCP).
+option broadcast-address 10.200.0.255;	Endereço de broadcast da sub-rede, usado para comunicação em grupo.
+💡 Observação importante
+
+A rede utilizada (10.200.0.0/24) é uma sub-rede privada de classe A, criada exclusivamente para este laboratório.
+O servidor DHCP está configurado com o IP 10.200.0.1, atuando como gateway e ponto de distribuição
+para os clientes conectados à interface interna enp0s8.
