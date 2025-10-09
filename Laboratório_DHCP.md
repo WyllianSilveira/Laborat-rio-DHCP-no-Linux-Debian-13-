@@ -261,3 +261,21 @@ A saída indica:
 ✅ Process: Demonstra o PID e o comando de inicialização (dhcpd -4 -q -cf /etc/dhcp/dhcpd.conf enp0s8).
 
 Essa etapa confirma que o servidor DHCP está funcional e pronto para atender as requisições dos clientes conectados à rede interna.
+
+
+<br><br>
+### 🔹8 Verificando a Configuração Automática do Cliente na Rede
+
+📸 **Imagem:**  
+![Verificando a configuração automática do cliente](imagem/Imagem_outro_pc_terminal_Linux_configuração_rede_automatica.png)
+
+🔍 **Explicação rápida:**  
+A imagem mostra a execução do comando `ip a` no terminal de um cliente conectado à rede interna controlada pelo servidor DHCP Debian. O cliente obteve um endereço IP automaticamente.
+
+- **Endereço IP obtido**: O cliente recebeu o endereço IP `10.200.0.100`, dentro da faixa configurada no servidor DHCP (`range 10.200.0.100 10.200.0.200`).
+- **Máscara de rede**: A máscara de rede é `255.255.255.0`, correspondente à sub-rede `10.200.0.0/24`.
+- **Status**: O comando `ip a` mostra que a interface está **UP** e funcionando corretamente.
+
+💡 **Importante:**  
+O cliente recebeu um endereço IP automaticamente do servidor DHCP (`10.200.0.100`), confirmando que o servidor Debian está configurado corretamente para distribuir IPs na rede interna.
+
