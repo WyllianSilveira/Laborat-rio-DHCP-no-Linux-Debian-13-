@@ -35,7 +35,7 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 # 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
 
-##🔹 1. Instalação e acesso ao diretório padrão de configuração
+## 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
 Antes de realizar as configurações, é necessário instalar o pacote do servidor DHCP no Debian.
 O serviço utilizado neste laboratório é o ISC-DHCP-SERVER, um dos mais usados em ambientes Linux.
@@ -45,7 +45,7 @@ Execute os comandos abaixo para realizar a instalação:
 apt update
 apt install isc-dhcp-server -y
 ````
-
+<br><br>
 ## 🔹 2. Acesso ao diretório padrão de configuração
 
 ```bash
