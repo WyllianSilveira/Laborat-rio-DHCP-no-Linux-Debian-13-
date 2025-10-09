@@ -1,6 +1,6 @@
 # 🛠️ Laboratório DHCP no Linux (Debian 13)
 
-## 📘 Descrição Geral
+# 📘 Descrição Geral
 
 Este laboratório tem como objetivo demonstrar a configuração completa de um servidor **DHCP**  
 em um ambiente Linux Debian 13, utilizando máquinas virtuais no VirtualBox para simular uma  
@@ -24,7 +24,7 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 ---
 
-## 🧩 Objetivos do Projeto
+# 🧩 Objetivos do Projeto
 
 - 🖥️⚙️ Instalar e configurar o serviço **DHCP** no Debian 13.  
 - 🌐📡 Fornecer configurações automáticas de IP para clientes conectados à rede interna  
@@ -35,7 +35,7 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 # 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
 
-## 🔹 1. Instalação e acesso ao diretório padrão de configuração
+# 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
 Antes de realizar as configurações, é necessário instalar o pacote do servidor DHCP no Debian.
 O serviço utilizado neste laboratório é o ISC-DHCP-SERVER, um dos mais usados em ambientes Linux.
@@ -46,7 +46,7 @@ apt update
 apt install isc-dhcp-server -y
 ````
 <br><br>
-## 🔹 2. Acesso ao diretório padrão de configuração
+# 🔹 2. Acesso ao diretório padrão de configuração
 
 ```bash
 cd /etc/default
@@ -65,7 +65,7 @@ de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
 <br><br>
 
-## 🔹 3. Editando o arquivo padrão do serviço
+# 🔹 3. Editando o arquivo padrão do serviço
 
 📸 Imagem:  
 ![Configuração padrão do serviço DHCP](imagem/arquivo_configuração_padrão_placa_dhcp.png)
@@ -89,7 +89,7 @@ INTERFACESv6: vazio, pois não estamos usando DHCPv6.
 interface enp0s8, evitando conflitos com outras interfaces do sistema.
 <br><br><br>
 
-## 🔹 4. Configurando a interface de rede no sistema
+# 🔹 4. Configurando a interface de rede no sistema
 
 📸 Imagem:  
 ![Configuração da interface de rede](imagem/configurando_interface_do_dhcp.png)
@@ -124,14 +124,14 @@ broadcast: endereço de broadcast da sub-rede.
 
 
 <br><br>
-## 🔹 5. Configurando o arquivo principal do serviço DHCP
+# 🔹 5. Configurando o arquivo principal do serviço DHCP
 
 📸 **Imagem:**  
 ![Acesso ao diretório /etc/dhcp](imagem/Caminho_do_diretorio_configuração_dhcp.png)
 
 Após definir a interface de rede do servidor, acessamos o diretório **/etc/dhcp**, onde estão armazenados os arquivos principais de configuração do serviço **ISC-DHCP-SERVER**.
 
-### 🔸 Comandos executados
+# 🔸 Comandos executados
 
 ```bash
 cd /etc/dhcp
@@ -153,7 +153,7 @@ O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, ut
 
 
 <br><br>
-## 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
+# 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
 
 📸 Imagem:<br>
 ![Arquivo de configuração DHCP](imagem/arquivo_com_configuração_dhcp.png)
