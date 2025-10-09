@@ -35,9 +35,18 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 # 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
 
-## 🔹 1. Acesso ao diretório padrão de configuração
+🔹 1. Instalação e acesso ao diretório padrão de configuração
 
+Antes de realizar as configurações, é necessário instalar o pacote do servidor DHCP no Debian.
+O serviço utilizado neste laboratório é o ISC-DHCP-SERVER, um dos mais usados em ambientes Linux.
 
+Execute os comandos abaixo para realizar a instalação:
+````bash
+apt update
+apt install isc-dhcp-server -y
+````
+
+## 🔹 2. Acesso ao diretório padrão de configuração
 
 ```bash
 cd /etc/default
@@ -55,7 +64,7 @@ de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 
 É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
 <br><br><br><br>
-## 🔹 2. Editando o arquivo padrão do serviço
+## 🔹 3. Editando o arquivo padrão do serviço
 
 📸 Imagem:  
 ![Configuração padrão do serviço DHCP](imagem/arquivo_configuração_padrão_placa_dhcp.png)
@@ -79,7 +88,7 @@ INTERFACESv6: vazio, pois não estamos usando DHCPv6.
 interface enp0s8, evitando conflitos com outras interfaces do sistema.
 <br><br><br>
 
-## 🔹 3. Configurando a interface de rede no sistema
+## 🔹 4. Configurando a interface de rede no sistema
 
 📸 Imagem:  
 ![Configuração da interface de rede](imagem/configurando_interface_do_dhcp.png)
@@ -95,10 +104,10 @@ Adicionamos a configuração manual da interface enp0s8, que será a interface s
 ```bash
 auto enp0s8
 iface enp0s8 inet static
-    address 10.200.0.1
-    netmask 255.255.0.0
-    network 10.200.0.0
-    broadcast 10.200.0.255
+address 10.200.0.1
+netmask 255.255.0.0
+network 10.200.0.0
+broadcast 10.200.0.255
 ```
 🔸 Explicação dos parâmetros:
 
