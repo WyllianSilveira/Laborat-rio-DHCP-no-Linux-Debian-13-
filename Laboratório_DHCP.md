@@ -63,7 +63,8 @@ Neste diretório, encontramos o arquivo `isc-dhcp-server`, responsável por arma
 de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 
 É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
-<br><br><br><br>
+<br><br>
+
 ## 🔹 3. Editando o arquivo padrão do serviço
 
 📸 Imagem:  
@@ -154,7 +155,7 @@ O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, ut
 <br><br>
 ## 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
 
-📸 Imagem:
+📸 Imagem:<br>
 ![Arquivo de configuração DHCP](imagem/arquivo_com_configuração_dhcp.png)
 
 🔸 Comando utilizado
