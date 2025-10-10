@@ -312,3 +312,31 @@ O arquivo `dhcpd.leases` armazena as informações de concessões de endereços 
 - O identificador único do cliente DHCP (`uid`);
 - O nome do host (se fornecido).
 
+
+<br><br>
+### 🔹10 Verificando a Configuração Automática do Cliente Windows 10 via DHCP
+
+📸 **Imagem:**  
+![Cliente Windows 10 recebendo IP via DHCP](imagem/windows 10 pegndo ip e configuração de rede do servidor dhcp linux.png)
+
+🔍 **Explicação rápida:**  
+Na imagem, vemos o prompt de comando do **Windows 10**, utilizado como cliente na rede interna, executando o comando `ipconfig` para exibir as configurações de rede.
+
+O resultado confirma que o cliente **obteve as configurações de rede automaticamente** do servidor **DHCP Debian**.
+
+### 📋 Dados obtidos automaticamente:
+
+| Parâmetro             | Valor                      | Origem                     |
+|-----------------------|----------------------------|----------------------------|
+| Endereço IPv4         | `10.200.0.102`             | Distribuído via DHCP       |
+| Máscara de Sub-rede   | `255.255.255.0`            | Conforme configuração DHCP |
+| Gateway Padrão        | `10.200.0.1`               | IP do servidor Debian      |
+
+🧠 **Análise Técnica:**
+
+- O IP `10.200.0.102` está **dentro da faixa definida no servidor** (`10.200.0.100` até `10.200.0.200`), comprovando que o cliente foi atendido corretamente.
+- A máscara de sub-rede e o gateway também foram atribuídos conforme as definições do bloco `subnet` no arquivo `dhcpd.conf`.
+- O fato de o IP ter sido atribuído dinamicamente confirma que o **serviço DHCP está funcional e operando normalmente na interface interna `enp0s8`**.
+
+💡 **Conclusão:**  
+O teste com o cliente Windows 10 demonstra com sucesso que o servidor Debian 13 está entregando **endereçamento IP automático funcional**, reforçando a eficácia da configuração DHCP aplicada neste laboratório.
