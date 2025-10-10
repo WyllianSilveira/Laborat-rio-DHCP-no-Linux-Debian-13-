@@ -183,7 +183,7 @@ subnet 10.200.0.0 netmask 255.255.255.0 {
 
 ````
 
-# 🧩 Explicação das Diretivas Globais
+## 🧩 Explicação das Diretivas Globais
 
 | Diretiva | Descrição |
 |-----------|------------|
@@ -196,7 +196,7 @@ subnet 10.200.0.0 netmask 255.255.255.0 {
 
 ---
 
-# 🧩 Explicação do Bloco `subnet`
+## 🧩 Explicação do Bloco `subnet`
 
 O bloco `subnet` define as configurações específicas para a rede interna controlada pelo servidor DHCP.
 
@@ -209,7 +209,7 @@ O bloco `subnet` define as configurações específicas para a rede interna cont
 
 ---
 
-# 💡 Observação Importante
+## 💡 Observação Importante
 
 - A rede utilizada (`10.200.0.0/24`) é uma **sub-rede privada de classe A**, criada exclusivamente para este laboratório.  
 - O servidor DHCP está configurado com o **IP 10.200.0.1**, atuando como **gateway e ponto de distribuição** para os clientes conectados à interface interna `enp0s8`.
