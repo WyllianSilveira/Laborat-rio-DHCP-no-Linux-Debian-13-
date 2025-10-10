@@ -310,9 +310,8 @@ O arquivo `dhcpd.leases` armazena as informações de concessões de endereços 
 - O horário de início e término da concessão;
 - O endereço MAC do cliente (identificado por `hardware ethernet`);
 - O identificador único do cliente DHCP (`uid`);
-- O nome do host (se fornecido).
+- O nome do host (se fornecido).<br><br>
 
-<br><br>
 ## 🔹10 Verificando a Configuração Automática do Cliente Windows 10 via DHCP
 
 📸 **Imagem:**  
