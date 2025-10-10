@@ -32,11 +32,12 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 - ✅💻 Validar o funcionamento do servidor DHCP através de uma estação cliente Windows 10  
   virtualizada, garantindo que o cliente obtenha corretamente as configurações de rede.
 
-
+<br>
 ## 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
 
 <br>
-### 🔹 1. Instalação e acesso ao diretório padrão de configuração
+
+## 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
 Antes de realizar as configurações, é necessário instalar o pacote do servidor DHCP no Debian.
 O serviço utilizado neste laboratório é o ISC-DHCP-SERVER, um dos mais usados em ambientes Linux.
