@@ -1,4 +1,4 @@
-# 🛠️ Laboratório DHCP no Linux (Debian 13)
+# 🛠️ Laboratório Servidor DHCP no Linux (Debian 13)
 
 # 📘 Descrição Geral
 
