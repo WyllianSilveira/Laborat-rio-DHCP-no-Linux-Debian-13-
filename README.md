@@ -23,7 +23,6 @@ Este repositório contém a documentação de um laboratório prático que simul
 
 ## 🧑‍💻 Autor
 
-Wyllian Silveira Calixto
-[github.com/seu-usuario]([https://github.com/seu-usuario](https://github.com/WyllianSilveira))
-
+**Wyllian Silveira Calixto**  
+[github.com/WyllianSilveira](https://github.com/WyllianSilveira)
 
