@@ -54,8 +54,8 @@ apt install isc-dhcp-server -y
 cd /etc/default
 ls
 ```
-
-![Acesso ao diretório padrão](imagem/imagem.png)
+📸 Imagem: 
+![Acesso ao diretório padrão](imagens/imagem.png)
 
 
 O primeiro passo é navegar até o diretório `/etc/default`, onde estão localizados os arquivos de  
@@ -72,7 +72,7 @@ de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 ## 🔹 3. Editando o arquivo padrão do serviço
 
 📸 Imagem:  
-![Configuração padrão do serviço DHCP](imagem/arquivo_configuração_padrão_placa_dhcp.png)
+![Configuração padrão do serviço DHCP](imagens/arquivo_configuração_padrão_placa_dhcp.png)
 
 Abrimos o arquivo de configuração padrão do serviço **DHCP**:
 
@@ -96,7 +96,7 @@ interface enp0s8, evitando conflitos com outras interfaces do sistema.
 ## 🔹 4. Configurando a interface de rede no sistema
 
 📸 Imagem:  
-![Configuração da interface de rede](imagem/configurando_interface_do_dhcp.png)
+![Configuração da interface de rede](imagens/configurando_interface_do_dhcp.png)
 
 Agora, configuramos o arquivo `/etc/network/interfaces` para definir os parâmetros de rede da interface  
 usada pelo DHCP.
@@ -130,7 +130,7 @@ broadcast: endereço de broadcast da sub-rede.
 ## 🔹 5. Configurando o arquivo principal do serviço DHCP
 
 📸 **Imagem:**  
-![Acesso ao diretório /etc/dhcp](imagem/Caminho_do_diretorio_configuração_dhcp.png)
+![Acesso ao diretório /etc/dhcp](imagens/Caminho_do_diretorio_configuração_dhcp.png)
 
 Após definir a interface de rede do servidor, acessamos o diretório **/etc/dhcp**, onde estão armazenados os arquivos principais de configuração do serviço **ISC-DHCP-SERVER**.
 
@@ -158,7 +158,7 @@ O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, ut
 ## 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
 
 📸 Imagem:<br>
-![Arquivo de configuração DHCP](imagem/arquivo_com_configuração_dhcp.png)
+![Arquivo de configuração DHCP](imagens/arquivo_com_configuração_dhcp.png)
 
 🔸 Comando utilizado
 ````bash
@@ -229,7 +229,7 @@ Isso forma a base de um **ambiente de rede automatizado e gerenciável**, essenc
 Após finalizar a configuração do arquivo `dhcpd.conf`, o próximo passo é **inicializar o serviço DHCP** e confirmar se ele foi executado corretamente.
 
 📸 Imagem:<br>
-![Verificando status do serviço DHCP](imagem/status_serviço_dhcp.png)
+![Verificando status do serviço DHCP](imagens/status_serviço_dhcp.png)
 
 ### 🧠 O que está sendo feito
 
@@ -268,7 +268,7 @@ Essa etapa confirma que o servidor DHCP está funcional e pronto para atender as
 ## 🔹8 Verificando a Configuração Automática do Cliente na Rede
 
 📸 **Imagem:**  
-![Verificando a configuração automática do cliente](imagem/Imagem_outro_pc_terminal_Linux_configuração_rede_automatica.png)
+![Verificando a configuração automática do cliente](imagens/Imagem_outro_pc_terminal_Linux_configuração_rede_automatica.png)
 
 🔍 **Explicação rápida:**  
 A imagem mostra a execução do comando `ip a` no terminal de um cliente conectado à rede interna controlada pelo servidor DHCP Debian. O cliente obteve um endereço IP automaticamente.
@@ -284,7 +284,7 @@ O cliente recebeu um endereço IP automaticamente do servidor DHCP (`10.200.0.10
 ## 🔹9 Verificando os Arquivos de Concessão do DHCP
 
 📸 **Imagem:**  
-![Verificando arquivos de concessão do DHCP](imagem/arquivo_maquinas_conectadas_no_server_dhcp.png)
+![Verificando arquivos de concessão do DHCP](imagens/arquivo_maquinas_conectadas_no_server_dhcp.png)
 
 🔍 **Explicação rápida:**  
 Na imagem, é mostrado o comando `ls` sendo executado no diretório `/var/lib/dhcp`. Esse diretório armazena os arquivos de concessão do servidor DHCP, que controlam os endereços IP atribuídos aos clientes.
@@ -301,7 +301,7 @@ Os arquivos de concessão, como `dhcpd.leases`, são essenciais para monitorar e
 📂 **Arquivo analisado:** `/var/lib/dhcp/dhcpd.leases`
 
 📸 **Imagem:**  
-![Verificando arquivos de concessão do DHCP](imagem/dhcpdleaves.png)
+![Verificando arquivos de concessão do DHCP](imagens/dhcpdleaves.png)
 
 🔍 **Explicação rápida:**  
 O arquivo `dhcpd.leases` armazena as informações de concessões de endereços IP feitas pelo servidor DHCP. Cada concessão registrada neste arquivo contém:
@@ -315,7 +315,7 @@ O arquivo `dhcpd.leases` armazena as informações de concessões de endereços 
 ## 🔹10 Verificando a Configuração Automática do Cliente Windows 10 via DHCP
 
 📸 **Imagem:**  
-![Cliente Windows 10 recebendo IP via DHCP](imagem/windows_dhcp_config.png)
+![Cliente Windows 10 recebendo IP via DHCP](imagens/windows_dhcp_config.png)
 
 🔍 **Explicação rápida:**  
 Na imagem, vemos o prompt de comando do **Windows 10**, utilizado como cliente na rede interna, executando o comando `ipconfig` para exibir as configurações de rede.
