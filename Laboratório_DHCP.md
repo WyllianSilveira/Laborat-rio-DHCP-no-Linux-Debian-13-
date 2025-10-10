@@ -1,6 +1,6 @@
 # 🛠️ Laboratório DHCP no Linux (Debian 13)
 
-## 📘 Descrição Geral
+# 📘 Descrição Geral
 
 Este laboratório tem como objetivo demonstrar a configuração completa de um servidor **DHCP**  
 em um ambiente Linux Debian 13, utilizando máquinas virtuais no VirtualBox para simular uma  
@@ -34,7 +34,7 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
   <br><br>
 
 
-# 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN <br><br>
+# 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN 
 
 ## 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
