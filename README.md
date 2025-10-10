@@ -17,7 +17,7 @@ Este repositório contém a documentação de um laboratório prático que simul
 
 ## 📂 Conteúdo do Repositório
 
-- Diagrama da arquitetura da rede (`.png`)
+- Diagrama da arquitetura da rede (`diagrama-lan-dhcp-debian.png`)
 - Prints e arquivos de configuração (`/imagens`)
 - Documentação detalhada do processo (`Laboratório_DHCP.md`)
 
