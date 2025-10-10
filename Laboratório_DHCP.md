@@ -1,6 +1,6 @@
-# 🛠️ Laboratório DHCP no Linux (Debian 13)
+## 🛠️ Laboratório DHCP no Linux (Debian 13)
 
-# 📘 Descrição Geral
+### 📘 Descrição Geral
 
 Este laboratório tem como objetivo demonstrar a configuração completa de um servidor **DHCP**  
 em um ambiente Linux Debian 13, utilizando máquinas virtuais no VirtualBox para simular uma  
@@ -24,7 +24,7 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 ---
 
-# 🧩 Objetivos do Projeto
+### 🧩 Objetivos do Projeto
 
 - 🖥️⚙️ Instalar e configurar o serviço **DHCP** no Debian 13.  
 - 🌐📡 Fornecer configurações automáticas de IP para clientes conectados à rede interna  
@@ -33,9 +33,9 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
   virtualizada, garantindo que o cliente obtenha corretamente as configurações de rede.
 
 
-# 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
-
-# 🔹 1. Instalação e acesso ao diretório padrão de configuração
+##🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
+<br>
+### 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
 Antes de realizar as configurações, é necessário instalar o pacote do servidor DHCP no Debian.
 O serviço utilizado neste laboratório é o ISC-DHCP-SERVER, um dos mais usados em ambientes Linux.
@@ -63,8 +63,9 @@ Neste diretório, encontramos o arquivo `isc-dhcp-server`, responsável por arma
 de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 
 É neste arquivo que especificamos **qual placa de rede o serviço vai usar para distribuir endereços IP**.
-<br><br>
 
+
+<br><br>
 # 🔹 3. Editando o arquivo padrão do serviço
 
 📸 Imagem:  
@@ -89,7 +90,7 @@ INTERFACESv6: vazio, pois não estamos usando DHCPv6.
 interface enp0s8, evitando conflitos com outras interfaces do sistema.
 <br><br><br>
 
-# 🔹 4. Configurando a interface de rede no sistema
+### 🔹 4. Configurando a interface de rede no sistema
 
 📸 Imagem:  
 ![Configuração da interface de rede](imagem/configurando_interface_do_dhcp.png)
@@ -124,7 +125,7 @@ broadcast: endereço de broadcast da sub-rede.
 
 
 <br><br>
-# 🔹 5. Configurando o arquivo principal do serviço DHCP
+### 🔹 5. Configurando o arquivo principal do serviço DHCP
 
 📸 **Imagem:**  
 ![Acesso ao diretório /etc/dhcp](imagem/Caminho_do_diretorio_configuração_dhcp.png)
@@ -153,7 +154,7 @@ O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, ut
 
 
 <br><br>
-# 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
+### 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
 
 📸 Imagem:<br>
 ![Arquivo de configuração DHCP](imagem/arquivo_com_configuração_dhcp.png)
@@ -222,7 +223,7 @@ Este bloco de configuração garante que todos os dispositivos conectados à red
 Isso forma a base de um **ambiente de rede automatizado e gerenciável**, essencial em infraestruturas corporativas ou laboratoriais.
 
 <br><br>
-## 🔹 7. Inicializando e Verificando o Serviço DHCP
+### 🔹 7. Inicializando e Verificando o Serviço DHCP
 
 Após finalizar a configuração do arquivo `dhcpd.conf`, o próximo passo é **inicializar o serviço DHCP** e confirmar se ele foi executado corretamente.
 
@@ -281,7 +282,7 @@ O cliente recebeu um endereço IP automaticamente do servidor DHCP (`10.200.0.10
 
 
 <br><br>
-## 🔹9 Verificando os Arquivos de Concessão do DHCP
+### 🔹9 Verificando os Arquivos de Concessão do DHCP
 
 📸 **Imagem:**  
 ![Verificando arquivos de concessão do DHCP](imagem/arquivo_maquinas_conectadas_no_server_dhcp.png)
@@ -317,7 +318,7 @@ O arquivo `dhcpd.leases` armazena as informações de concessões de endereços 
 ### 🔹10 Verificando a Configuração Automática do Cliente Windows 10 via DHCP
 
 📸 **Imagem:**  
-![Cliente Windows 10 recebendo IP via DHCP](imagem/windows_dhcp_config)
+![Cliente Windows 10 recebendo IP via DHCP](imagem/windows_dhcp_config.png)
 
 🔍 **Explicação rápida:**  
 Na imagem, vemos o prompt de comando do **Windows 10**, utilizado como cliente na rede interna, executando o comando `ipconfig` para exibir as configurações de rede.
