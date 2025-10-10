@@ -31,11 +31,10 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
   (sub-rede `10.200.0.0/24`).  
 - ✅💻 Validar o funcionamento do servidor DHCP através de uma estação cliente Windows 10  
   virtualizada, garantindo que o cliente obtenha corretamente as configurações de rede.
+  <br>
 
-<br>
-## 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
 
-<br>
+# 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN <br>
 
 ## 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
