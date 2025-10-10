@@ -140,6 +140,7 @@ Após definir a interface de rede do servidor, acessamos o diretório **/etc/dhc
 cd /etc/dhcp
 ls
 ````
+
 📘 Explicação
 
 cd /etc/dhcp → acessa o diretório onde ficam os arquivos de configuração do servidor DHCP.
