@@ -24,17 +24,17 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 ---
 
-## 🧩 Objetivos do Projeto
+# 🧩 Objetivos do Projeto
 
 - 🖥️⚙️ Instalar e configurar o serviço **DHCP** no Debian 13.  
 - 🌐📡 Fornecer configurações automáticas de IP para clientes conectados à rede interna  
   (sub-rede `10.200.0.0/24`).  
 - ✅💻 Validar o funcionamento do servidor DHCP através de uma estação cliente Windows 10  
   virtualizada, garantindo que o cliente obtenha corretamente as configurações de rede.
-  <br>
+  <br><br>
 
 
-# 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN <br>
+# 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN <br><br>
 
 ## 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
