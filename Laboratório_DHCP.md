@@ -1,6 +1,6 @@
-## 🛠️ Laboratório DHCP no Linux (Debian 13)
+# 🛠️ Laboratório DHCP no Linux (Debian 13)
 
-### 📘 Descrição Geral
+## 📘 Descrição Geral
 
 Este laboratório tem como objetivo demonstrar a configuração completa de um servidor **DHCP**  
 em um ambiente Linux Debian 13, utilizando máquinas virtuais no VirtualBox para simular uma  
@@ -24,7 +24,7 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
 
 ---
 
-### 🧩 Objetivos do Projeto
+## 🧩 Objetivos do Projeto
 
 - 🖥️⚙️ Instalar e configurar o serviço **DHCP** no Debian 13.  
 - 🌐📡 Fornecer configurações automáticas de IP para clientes conectados à rede interna  
@@ -46,7 +46,8 @@ apt update
 apt install isc-dhcp-server -y
 ````
 <br><br>
-# 🔹 2. Acesso ao diretório padrão de configuração
+
+## 🔹 2. Acesso ao diretório padrão de configuração
 
 ```bash
 cd /etc/default
@@ -66,7 +67,8 @@ de inicialização e as interfaces de rede que o serviço **DHCP** utilizará.
 
 
 <br><br>
-# 🔹 3. Editando o arquivo padrão do serviço
+
+## 🔹 3. Editando o arquivo padrão do serviço
 
 📸 Imagem:  
 ![Configuração padrão do serviço DHCP](imagem/arquivo_configuração_padrão_placa_dhcp.png)
@@ -88,9 +90,9 @@ INTERFACESv6: vazio, pois não estamos usando DHCPv6.
 
 💡 Essa configuração garante que o serviço ISC-DHCP-Server escute e distribua IPs apenas pela
 interface enp0s8, evitando conflitos com outras interfaces do sistema.
-<br><br><br>
+<br><br>
 
-### 🔹 4. Configurando a interface de rede no sistema
+## 🔹 4. Configurando a interface de rede no sistema
 
 📸 Imagem:  
 ![Configuração da interface de rede](imagem/configurando_interface_do_dhcp.png)
@@ -102,7 +104,7 @@ usada pelo DHCP.
 nano /etc/network/interfaces
 ```
 Adicionamos a configuração manual da interface enp0s8, que será a interface servidora DHCP (rede interna):
-# Interface DHCP
+## Interface DHCP
 ```bash
 auto enp0s8
 iface enp0s8 inet static
@@ -123,9 +125,8 @@ broadcast: endereço de broadcast da sub-rede.
 
 💡 Essa interface servirá como gateway e ponto de distribuição de endereços IP para os clientes DHCP.
 
-
 <br><br>
-### 🔹 5. Configurando o arquivo principal do serviço DHCP
+## 🔹 5. Configurando o arquivo principal do serviço DHCP
 
 📸 **Imagem:**  
 ![Acesso ao diretório /etc/dhcp](imagem/Caminho_do_diretorio_configuração_dhcp.png)
@@ -152,9 +153,8 @@ dhclient-exit-hooks.d → diretório com scripts de saída executados pelo clien
 
 O arquivo que será editado e configurado neste laboratório é o dhcpd.conf, utilizado pelo serviço para definir o comportamento da distribuição de endereços IP, parâmetros de rede e opções entregues aos clientes.
 
-
 <br><br>
-### 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
+## 🔹 6. Editando o arquivo de configuração principal (dhcpd.conf)
 
 📸 Imagem:<br>
 ![Arquivo de configuração DHCP](imagem/arquivo_com_configuração_dhcp.png)
@@ -221,9 +221,9 @@ Este bloco de configuração garante que todos os dispositivos conectados à red
 - Servidor DNS funcional.
 
 Isso forma a base de um **ambiente de rede automatizado e gerenciável**, essencial em infraestruturas corporativas ou laboratoriais.
-
 <br><br>
-### 🔹 7. Inicializando e Verificando o Serviço DHCP
+
+## 🔹 7. Inicializando e Verificando o Serviço DHCP
 
 Após finalizar a configuração do arquivo `dhcpd.conf`, o próximo passo é **inicializar o serviço DHCP** e confirmar se ele foi executado corretamente.
 
@@ -263,9 +263,8 @@ A saída indica:
 
 Essa etapa confirma que o servidor DHCP está funcional e pronto para atender as requisições dos clientes conectados à rede interna.
 
-
 <br><br>
-### 🔹8 Verificando a Configuração Automática do Cliente na Rede
+## 🔹8 Verificando a Configuração Automática do Cliente na Rede
 
 📸 **Imagem:**  
 ![Verificando a configuração automática do cliente](imagem/Imagem_outro_pc_terminal_Linux_configuração_rede_automatica.png)
@@ -280,9 +279,8 @@ A imagem mostra a execução do comando `ip a` no terminal de um cliente conecta
 💡 **Importante:**  
 O cliente recebeu um endereço IP automaticamente do servidor DHCP (`10.200.0.100`), confirmando que o servidor Debian está configurado corretamente para distribuir IPs na rede interna.
 
-
 <br><br>
-### 🔹9 Verificando os Arquivos de Concessão do DHCP
+## 🔹9 Verificando os Arquivos de Concessão do DHCP
 
 📸 **Imagem:**  
 ![Verificando arquivos de concessão do DHCP](imagem/arquivo_maquinas_conectadas_no_server_dhcp.png)
@@ -313,9 +311,8 @@ O arquivo `dhcpd.leases` armazena as informações de concessões de endereços 
 - O identificador único do cliente DHCP (`uid`);
 - O nome do host (se fornecido).
 
-
 <br><br>
-### 🔹10 Verificando a Configuração Automática do Cliente Windows 10 via DHCP
+## 🔹10 Verificando a Configuração Automática do Cliente Windows 10 via DHCP
 
 📸 **Imagem:**  
 ![Cliente Windows 10 recebendo IP via DHCP](imagem/windows_dhcp_config.png)
