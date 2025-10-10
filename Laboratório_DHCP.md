@@ -303,8 +303,6 @@ Os arquivos de concessão, como `dhcpd.leases`, são essenciais para monitorar e
 📸 **Imagem:**  
 ![Verificando arquivos de concessão do DHCP](imagem/dhcpdleaves.png)
 
-📂 **Arquivo analisado:** `/var/lib/dhcp/dhcpd.leases`
-
 🔍 **Explicação rápida:**  
 O arquivo `dhcpd.leases` armazena as informações de concessões de endereços IP feitas pelo servidor DHCP. Cada concessão registrada neste arquivo contém:
 
