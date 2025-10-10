@@ -33,7 +33,8 @@ simulando a atuação de um servidor DHCP real em redes corporativas.
   virtualizada, garantindo que o cliente obtenha corretamente as configurações de rede.
 
 
-##🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
+## 🧾 DOCUMENTAÇÃO – CONFIGURAÇÃO DO SERVIDOR DHCP (ISC-DHCP-SERVER) NO DEBIAN
+
 <br>
 ### 🔹 1. Instalação e acesso ao diretório padrão de configuração
 
