@@ -299,8 +299,10 @@ Os arquivos de concessão, como `dhcpd.leases`, são essenciais para monitorar e
 
 
 📂 **Arquivo analisado:** `/var/lib/dhcp/dhcpd.leases`
+
 📸 **Imagem:**  
 ![Verificando arquivos de concessão do DHCP](imagem/dhcpdleaves.png)
+
 📂 **Arquivo analisado:** `/var/lib/dhcp/dhcpd.leases`
 
 🔍 **Explicação rápida:**  
