@@ -317,7 +317,7 @@ O arquivo `dhcpd.leases` armazena as informações de concessões de endereços 
 ### 🔹10 Verificando a Configuração Automática do Cliente Windows 10 via DHCP
 
 📸 **Imagem:**  
-![Cliente Windows 10 recebendo IP via DHCP](imagem/windows 10 pegndo ip e configuração de rede do servidor dhcp linux.png)
+![Cliente Windows 10 recebendo IP via DHCP](imagem/windows_dhcp_config)
 
 🔍 **Explicação rápida:**  
 Na imagem, vemos o prompt de comando do **Windows 10**, utilizado como cliente na rede interna, executando o comando `ipconfig` para exibir as configurações de rede.
